@@ -1,10 +1,4 @@
-<?php
-    session_start();
-    if ($_SESSION['user']['status'] !== 'employee') {
-        header('Location: index.php');
-        exit;
-    }
-?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,8 +11,21 @@
 </head>
 <body>
     <?php include 'templates/header.php'; ?>
+    <?php
+    if ($_SESSION['user']['status'] !== 'employee') {
+        header('Location: index.php');
+        exit;
+    }
+?>
     <main>
         <div class="employee">
+        <div class="btn-deconnexion">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x-circle">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="15" y1="9" x2="9" y2="15"></line>
+                <line x1="9" y1="9" x2="15" y2="15"></line>
+                </svg>
+            </div>
             <h2>Espace Employé</h2>
             <section class="commande-a-valider">
                 <h3>Commande à valider</h3>

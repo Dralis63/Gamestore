@@ -219,4 +219,24 @@ $(document).ready(function() {
     // Charger les commandes initiales et les commandes livrées
     loadOrders();
     loadDeliveredOrders();
+    function deconnexion() {
+        // Effectuer une requête AJAX
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', 'deconnexion.php', true);
+    
+        xhr.onload = function() {
+            if (xhr.status === 200) {
+                // Redirection après déconnexion
+                window.location.href = 'index.php';
+            } else {
+                console.log('Erreur lors de la déconnexion : ' + xhr.status);
+            }
+        };
+    
+        xhr.send();
+    }
+    var btnDeconnexion = document.querySelector('.btn-deconnexion');
+    btnDeconnexion.addEventListener('click', function() {
+        deconnexion();
+    });
 });
