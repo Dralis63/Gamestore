@@ -5,7 +5,7 @@ session_start();
 header('Content-Type: application/json');
 
 // Vérifier si l'utilisateur est connecté
-if (!isset($_SESSION['user']['id'])) {
+if (!isset($_SESSION['user']['id']) || $_SESSION['user']['status'] != "utilisateur") {
     echo json_encode(array('success' => false, 'error' => 'Utilisateur non connecté.'));
     exit;
 }
