@@ -1,0 +1,855 @@
+/* Réinitialisation des marges et paddings */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Taille de base de la police en fonction de la racine (10px) */
+html {
+    font-size: 62.5%; /* 1rem = 10px, donc 62.5% = 10px */
+}
+
+/* Styles généraux du corps de la page */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+
+/* Styles pour les titres principaux */
+h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 4.5rem;
+    font-weight: bold;
+    color: #fff;
+    filter: drop-shadow(1rem 1rem 0.2rem rgba(0, 0, 0, 0.4));
+    margin: 0;
+}
+
+/* Styles pour l'en-tête */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #004999;
+    min-height: 10rem;
+    padding: 0 10rem;
+    box-shadow: 0rem 0.4rem 0.4rem rgba(0, 0, 0, 0.3);
+}
+header nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 3.5rem;
+    max-width: 64rem;
+    justify-content: space-between;
+}
+
+header nav ul li a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.8rem;
+    width: 20rem;
+    height: 100%;
+}
+
+header nav ul li a.active {
+    background-color: #fff;
+    color: #004999;
+    border-radius: 0.5rem;
+}
+.cart-icon {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-left: 1rem;
+}
+
+.cart-icon img {
+    width: 3rem;
+    height: auto;
+}
+
+.cart-count {
+    position: absolute;
+    top: -0.5rem;
+    right: -0.5rem;
+    background-color: #CC0000;
+    color: white;
+    font-size: 1.2rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 50%;
+}
+/* Styles pour la section principale */
+main {
+    padding: 2rem 10rem;
+    text-align: center;
+    background-image: url(../img/fond.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+}
+
+/* Styles pour les informations sur l'entreprise */
+.infosEntreprise {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(249, 249, 249, 0.8);
+    padding: 2rem;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+h2 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 2.4rem;
+    font-weight: bold;
+    color: #333333;
+    margin-top: 2rem;
+}
+h3 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #000000;
+    margin-top: 2rem;
+    text-align: left;
+    margin-left: 1rem;
+}
+.infosEntreprise p {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #333333;
+    margin: 2rem 10rem;
+    padding: 1rem;
+}
+
+.infosEntreprise a {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+    width: 100%;
+    max-width: 20rem;
+    height: 4rem;
+    background-color: #145523;
+    border-radius: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+/* Styles pour la section Jeux Vidéo */
+.JeuxVideo {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(247, 247, 247, 0.7);
+    margin-top: 2rem;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+/* Styles pour l'affichage des jeux (normal et promo) */
+.affichage_jeux,
+.affichage_jeux_promo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin: 2rem;
+}
+
+/* Styles pour la carte de jeu */
+.jeu-card {
+    position: relative;
+    width: 20rem;
+    height: 30rem;
+    background-color: #f9f9f9;
+    border-radius: 1rem;
+    margin: 1rem;
+    padding: 1rem;
+    box-sizing: border-box;
+    cursor: pointer;
+    border: solid 0.1rem #CCCCCC;
+}
+
+/* Badge promotionnel sur la carte de jeu */
+.promo-badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background-color: #CC0000;
+    color: #ffffff;
+    padding: 0.5rem 1rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    z-index: 1;
+}
+
+/* Image du jeu */
+.jeu-img {
+    width: auto;
+    height: 18rem;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border-radius: 0.5rem;
+}
+
+/* Détails du jeu */
+.jeu-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: calc(100% - 20rem);
+    padding: 1rem 0;
+}
+
+.jeu-name {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #333333;
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+.jeu-pegi {
+    color: #666666;
+    font-size: 1.4rem;
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+.jeu-price {
+    font-size: 1.8rem;
+    color: #333333;
+    text-align: center;
+}
+
+/* Barre de filtres */
+.filters-bar {
+    background-color: #f9f9f9;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 2rem;
+    box-shadow: 0 0.2rem 0.2rem rgba(0, 0, 0, 0.2);
+}
+
+.filters-bar select {
+    width: 15rem;
+    height: 3rem;
+    margin-right: 1rem;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    border: 0.1rem solid #000;
+    background-color: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.6rem;
+}
+
+/* Affichage de tous les jeux */
+.affichage_jeux_all {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin: 2rem;
+}
+
+/* Carte de jeu pour l'affichage de tous les jeux */
+.jeu-card-all {
+    position: relative;
+    width: calc(25% - 2rem); /* 25% - marge */
+    width: 25rem; /* Largeur fixe */
+    height: 40rem; /* Hauteur fixe */
+    background-color: #f9f9f9;
+    border-radius: 1rem;
+    margin: 2rem;
+    padding: 1rem;
+    box-sizing: border-box;
+    border: solid 0.1rem #CCCCCC;
+}
+
+/* Badge promotionnel sur la carte de jeu (pour l'affichage de tous les jeux) */
+.promo-badge-all {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background-color: #CC0000;
+    color: #ffffff;
+    padding: 0.5rem 1rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    z-index: 1;
+}
+
+/* Image du jeu (pour l'affichage de tous les jeux) */
+.jeu-img-all {
+    width: auto;
+    height: 18rem;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border-radius: 0.5rem;
+}
+
+/* Détails du jeu (pour l'affichage de tous les jeux) */
+.jeu-details-all {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: calc(100% - 20rem);
+    padding: 1rem 0;
+    align-items: center;
+}
+
+.jeu-name-all {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #333333;
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+.jeu-pegi-all {
+    color: #666666;
+    font-size: 1.4rem;
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+.jeu-price-all {
+    font-size: 1.8rem;
+    color: #333333;
+    text-align: center;
+}
+
+.jeu-stock-all {
+    font-size: 1.2rem;
+    color: #145523;
+    text-align: center;
+}
+
+.jeu-noStock-all {
+    font-size: 1.2rem;
+    color: #CC0000;
+    text-align: center;
+}
+
+/* Bouton ajouter au panier */
+.btn-add-panier {
+    background-color: #737373;
+    border-radius: 0.5rem;
+    width: 15rem;
+    height: 3rem;
+    font-size: 1.4rem;
+    color: #FFFFFF;
+    border: none;
+}
+
+/* Bouton ajouter */
+.btn-add {
+    background-color: #145523;
+    cursor: pointer;
+}
+
+/* Image de fond pour les sections de jeu */
+.background-game img {
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: auto;
+    height: 30rem;
+    background-position: center;
+    overflow: hidden;
+}
+
+/* Détails du jeu (section détail) */
+.detail-jeu {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(249, 249, 249, 0.8);
+    border-radius: 1rem;
+    margin-top: 2rem;
+    box-sizing: border-box;
+    overflow: hidden;
+    padding-bottom: 2rem;
+}
+
+.detail-jeu p {
+    font-size: 1.8rem;
+    color: #333333;
+    text-align: left;
+    padding: 2rem;
+}
+
+/* Styles pour la section de connexion et création de compte */
+.connexion,
+.create-account {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(249, 249, 249, 0.8);
+    border: solid 0.1rem #CCCCCC;
+    border-radius: 1rem;
+    margin-top: 2rem;
+    box-sizing: border-box;
+    overflow: hidden;
+    padding-bottom: 2rem;
+    align-items: center;
+}
+
+.connexion p {
+    font-size: 1.4rem;
+    color: #333333;
+}
+
+/* Styles pour les champs de formulaire et boutons de connexion/inscription */
+#creation-compte-form input,
+.connexion input[type="email"],
+.connexion input[type="password"],
+.connexion input[type="text"],
+.connexion input[type="tel"],
+.connexion button.btn-connect,
+.create-account input[type="email"],
+.create-account input[type="password"],
+.create-account input[type="text"],
+.create-account input[type="tel"],
+.create-account button.btn-inscrire {
+    height: 4rem;
+    width: 20rem;
+    border-radius: 0.5rem;
+    background-color: #fff;
+    border: solid 0.1rem #CCCCCC;
+    text-align: center;
+    font-size: 1.6rem;
+    margin: 0.5rem;
+}
+
+
+.connexion button.btn-connect,
+.create-account button.btn-inscrire {
+    background-color: #145523;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* Styles pour les éléments centrés */
+.centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.centered p {
+    font-size: 1.8rem;
+    color: #000000;
+    margin: 2rem 1rem;
+    font-weight: bold;
+}
+
+.centered .fa-chevron-down {
+    font-size: 2rem;
+    color: #000000;
+}
+.container-myspace {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(249, 249, 249, 0.7);
+    margin-top: 2rem;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.info-section {
+    background-color: #f9f9f9;
+    border-radius: 0.5rem;
+    margin: 2rem;
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+.info-section input[type="email"],
+.info-section input[type="password"],
+.info-section input[type="text"],
+.info-section input[type="tel"],
+.info-section button.btn-save,button.btn-order {
+    height: 4rem;
+    width: 20rem;
+    border-radius: 0.5rem;
+    background-color: #fff;
+    border: solid 0.1rem #CCCCCC;
+    text-align: center;
+    font-size: 1.6rem;
+    margin: 0.5rem;
+}
+
+.info-section button.btn-save, button.btn-order {
+    background-color: #145523;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    margin-bottom: 2rem;
+}
+
+/* Styliser le tableau des commandes */
+.orders-table {
+    width: calc(100% - 4rem);
+    border-collapse: collapse;
+    text-align: center;
+    margin: 1rem;
+}
+
+.orders-table th, .orders-table td {
+    padding: 1rem;
+    border: 0.1rem solid #ccc;
+}
+
+.orders-table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+    font-size: 1.4rem;
+    color: #000;
+}
+.orders-table tr {
+    font-size: 1.2rem;
+    color: #333333;
+}
+
+.orders-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.orders-table tbody tr:hover {
+    background-color: #e9e9e9;
+}
+
+
+.container-mycart {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(249, 249, 249, 0.7);
+    margin-top: 2rem;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+.cart-items {
+    width: 100%;
+    margin: 1rem;
+}
+.cart-item {
+    margin: 1rem 10rem;
+    padding: 1rem;
+    border: 0.1rem solid #CCCCCC;
+    border-radius: 0.5rem;
+    background-color: #F9F9F9;
+    font-size: 1.6rem;
+    display: flex;
+    align-items: center;
+}
+
+.cart-item-details {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cart-item-details span {
+    flex: 1;
+    padding: 0 1rem;
+}
+#agence, #date {
+    width: 20rem;
+    height: 3rem;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    border: 0.1rem solid #000;
+    background-color: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+}
+.btn-delete {
+    background-color: #F9F9F9;
+    border: solid 0.1rem #CC0000;
+    margin-left: 1rem;
+    padding: 1rem;
+    font-size: 1.4rem;
+    color: #000;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-delete:hover {
+    background-color: #CC0000;
+    color: #fff;
+}
+.total-price {
+    font-size: 1.8rem;
+    color: #333333;
+    font-weight: bold;
+    margin: 1rem;
+}
+.employee{
+    display: flex;
+    flex-direction: column;
+    background-color: #F9F9F9;
+    border-radius: 1rem;
+    align-items: center;
+    margin-top: 2rem;
+    overflow: hidden;
+    box-sizing: border-box;
+    padding: 0rem 5rem;
+}
+.commande-a-valider {
+    border-radius: 1rem;
+    border: solid 0.1rem #CCCCCC;
+    width: 100%;
+    margin-top: 2rem;
+}
+.btn-livrer {
+    width: 12rem;
+    height: 4rem;
+    background-color: #145523;
+    border-radius: 0.5rem;
+    color: #fff;
+    font-size: 1.2rem;
+
+}
+.graphique-ventes {
+    border-radius: 1rem;
+    border: solid 0.1rem #CCCCCC;
+    width: 100%;
+    margin-top: 2rem;
+}
+.btn-details-ventes {
+    width: 12rem;
+    height: 4rem;
+    background-color: #145523;
+    border-radius: 0.5rem;
+    color: #fff;
+    font-size: 1.2rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+.details-ventes{
+    border-radius: 1rem;
+    border: solid 0.1rem #CCCCCC;
+    width: 100%;
+    margin-bottom: 2rem;
+    display: none;
+}
+#filtre {
+    width: 15rem;
+    height: 3rem;
+    margin-right: 1rem;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    border: 0.1rem solid #000;
+    background-color: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.6rem;
+}
+/* Styles pour le pied de page */
+footer {
+    background-color: #004999;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    bottom: 0;
+    width: 100%;
+    min-height: 10rem;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10rem;
+    width: 100%;
+}
+
+.footer-container ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-container ul li {
+    font-size: 1.6rem;
+}
+
+
+
+.conteneur-admin {
+    display: flex;
+    flex-direction: row;
+    background-color: #f5f5f5;
+    border-radius: 1rem;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.menu-admin {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #333333;
+    width: 20%;
+    padding: 2rem 0; 
+}
+
+.menu-admin nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.menu-admin nav ul li {
+    margin-bottom: 2rem;
+}
+
+.menu-admin nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.6rem;
+    display: block;
+    padding: 1rem 2rem;
+    transition: background-color 0.3s ease;
+}
+
+.menu-admin nav ul li a:hover,
+.menu-admin nav ul li a.active {
+    background-color: #555;
+
+}
+
+.section-admin {
+    flex: 1;
+    padding: 2rem;
+    overflow-y: auto;
+    max-height: calc(100vh - 200px);
+}
+#salesChart, #dashboardChart {
+    max-width: 100%;
+    height: auto;
+    width: 100%;
+}
+#creation-jeu-form {
+    margin-top: 2rem;
+    align-items: center;
+}
+#creation-jeu-form input[type="text"],
+#creation-jeu-form input[type="number"],
+#creation-jeu-form select {
+    height: 4rem;
+    width: 20rem;
+    border-radius: 0.5rem;
+    background-color: #fff;
+    border: solid 0.1rem #CCCCCC;
+    text-align: center;
+    font-size: 1.6rem;
+    margin: 0.5rem;
+}
+
+#creation-jeu-form textarea {
+    height: 10rem;
+    width: 84rem;
+    border-radius: 0.5rem;
+    background-color: #fff;
+    border: solid 0.1rem #CCCCCC;
+    text-align: center;
+    font-size: 1.6rem;
+    margin: 0.5rem;
+}
+#creation-compte button,
+#creation-jeu-form button {
+    height: 4rem;
+    width: 20rem;
+    border-radius: 0.5rem;
+    background-color: #145523;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1.6rem;
+    margin-top: 2rem;
+}
+#creation-jeu-form label {
+    font-size: 1.6rem;
+    margin: 0.5rem;
+}
+
+#creation-jeu-form input[type="file"] {
+    height: 4rem;
+    width: 28rem;
+    border-radius: 0.5rem;
+    background-color: #fff;
+    border: solid 0.1rem #CCCCCC;
+    text-align: center;
+    font-size: 1.6rem;
+    padding: 0.8rem;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+
+/* Media queries pour les différentes résolutions */
+@media screen and (max-width: 1400px) {
+    main {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    header, .footer-container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    header {
+        display: flex;
+        flex-direction: column;
+        padding: 1.5rem;
+    }
+    h1 {
+        font-size: 3.5rem;
+    }
+    .infosEntreprise p {
+        margin: 2rem 2rem;
+    }
+    .footer-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer-container ul {
+        padding: 0.5rem;
+    }
+    .cart-item {
+        margin: 1rem 1rem;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .jeu-card {
+        margin: 0.5rem;
+    }
+}
