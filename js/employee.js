@@ -45,8 +45,6 @@ $(document).ready(function() {
 
     // Fonction pour mettre à jour le statut de la commande à "LIVRÉ" et ajuster les stocks des jeux
     function updateOrderStatus(orderId, details) {
-        console.log('Order ID:', orderId);
-        console.log('Details:', details);
         
         $.ajax({
             url: 'requetes_php/update_order_status.php',
@@ -55,7 +53,7 @@ $(document).ready(function() {
             data: { orderId: orderId, details: JSON.stringify(details) },
             success: function(response) {
                 if (response.success) {
-                    console.log('Commande mise à jour avec succès');
+                    alert('Statut de la commande mis à jour avec succès');
                     loadOrders();
                 } else {
                     console.error('Erreur lors de la mise à jour du statut de la commande:', response.error);

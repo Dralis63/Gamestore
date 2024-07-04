@@ -287,11 +287,9 @@ function generateGenreSalesChart(orders) {
 // Gestion de la soumission du formulaire de création de jeu
 document.getElementById('creation-jeu-form').addEventListener('submit', function(event) {
     event.preventDefault();
-    console.log('Form submitted');
 
     // Récupérer les données du formulaire
     var formData = new FormData(this);
-    console.log('FormData:', formData);
 
     // Envoyer les données via AJAX
     $.ajax({
@@ -302,7 +300,6 @@ document.getElementById('creation-jeu-form').addEventListener('submit', function
         processData: false,
         dataType: 'json',
         success: function(response) {
-            console.log('AJAX Success:', response);
             if (response.success) {
                 alert('Le jeu a été créé avec succès.');
                 // Réinitialiser le formulaire
@@ -329,7 +326,6 @@ function loadGames() {
         dataType: 'json',
         success: function(response) {
             if (response.message) {
-                console.log(response.message);
                 return;
             }
 

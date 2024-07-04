@@ -96,7 +96,7 @@ function allGameHTML(jeu) {
     let btnText = jeu.stock == 0 ? 'En rupture' : 'Ajouter';
     let btnClass = 'btn-add-panier';
     let btnDisabled = jeu.stock == 0 || !isUserLoggedIn || userStatus != 'utilisateur' ? 'disabled' : '';
-    console.log(userStatus);
+
     if (jeu.stock > 0 && isUserLoggedIn && userStatus == 'utilisateur') {
         btnClass += ' btn-add';
     }
