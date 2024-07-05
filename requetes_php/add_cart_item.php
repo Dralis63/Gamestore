@@ -73,7 +73,6 @@ if (isset($data->gameId)) {
         echo json_encode(array('success' => false, 'error' => 'Erreur de connexion à la base de données: ' . $e->getMessage()));
     }
 
-    // Pas besoin de fermer la connexion à la base de données car elle est incluse via require_once
 } else {
     // Si les données ne sont pas reçues correctement
     echo json_encode(array('success' => false, 'error' => 'Données manquantes.'));
