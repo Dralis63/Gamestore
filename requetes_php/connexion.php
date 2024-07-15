@@ -45,7 +45,8 @@ $_SESSION['user'] = [
     'nom' => $user['nom'],
     'prenom' => $user['prenom'],
     'status' => $user['status'],
-    'email' => $user['email'], // Ajout de l'email dans la session
+    'email' => $user['email'],
+    'ville' => $user['ville'],
 ];
 
 http_response_code(200);

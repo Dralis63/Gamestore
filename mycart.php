@@ -16,7 +16,7 @@
             <div class="cart-items">
                 <!-- Les articles seront ajoutés ici dynamiquement par JavaScript -->
             </div>
-            <select id="agence">
+            <select id="agence" data-user-ville="<?php echo isset($_SESSION['user']['ville']) ? $_SESSION['user']['ville'] : ''; ?>">
             <option value="">Agence de Retrait</option>
             <option value="bordeaux">Bordeaux</option>
             <option value="lille">Lille</option>
