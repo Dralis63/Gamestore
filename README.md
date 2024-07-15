@@ -74,7 +74,7 @@ Gamestore est un site web de vente de jeux vidéo. Ce projet permet aux utilisat
 - **Parcourir les jeux** : Les utilisateurs peuvent parcourir les jeux disponibles sur la page d'accueil.
 - **Rechercher des jeux** : Utilisez les filtres pour rechercher des jeux par genre, prix et plateforme.
 - **Détails du jeu** : Cliquez sur un jeu pour voir ses détails et l'ajouter au panier.
-- **Panier** : Ajoutez des jeux au panier et passez à la caisse pour finaliser l'achat.
+- **Panier** : Ajoutez des jeux au panier.
 
 ## Auteurs
 
